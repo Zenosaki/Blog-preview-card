@@ -1,0 +1,11 @@
+@mixin aspects($width, $height){
+  width: $width;
+  height: $height;
+}
+
+@mixin Display($display,$direction,$aligne,$justify){
+  display: $display;
+  flex-direction: $direction;
+  align-items: $aligne;
+  justify-content: $justify;
+}

@@ -1,0 +1,55 @@
+@import "utils/colors";
+@import "utils/Fonts";
+@import "utils/mixins";
+@import url($Link);
+*{
+  padding: 0;
+  margin: 0;
+  font-family: $Font-family,sans-serif;
+}
+
+
+.container{
+  @include aspects(100%,100vh);
+  @include Display(flex,row,center,center);
+  background-color: $Yellow;
+  main{
+    box-shadow: 10px 10px black;
+    @include Display(flex,column);
+    background-color: $White;
+    border: 1px solid;
+    border-radius: 15px;
+    @include aspects(340px,473px);
+    padding: 25px 19px;
+    gap: 18px;
+    .title{
+      background-color: $Yellow;
+      @include aspects(50px,auto);
+      padding: 6px 15px;
+      border-radius: 5px;
+    }
+    .background-img{
+      border-radius: 15px;
+    }
+    .Description{
+      color:$Grey;
+      font-size: $Font-size-paragraph;
+      line-height: 1.5;
+    }
+    ul{
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      gap: 15px;
+  
+      li{
+        img{
+          @include aspects(30px,auto);
+        }
+        h5{
+          font-weight: $Titles;
+        }
+      }
+    }
+  }
+}
